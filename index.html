@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praise Sunday - Web Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00a86b;
+            --secondary-color: #000000;
+            --text-color: #ffffff;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+        }
+
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 80%;
+            border-radius: 20%;
+            border: 5px solid var(--primary-color);
+        }
+
+        .about, .assignments {
+            padding: 50px 0;
+        }
+
+        .assignments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .assignment-card {
+            background-color: var(--primary-color);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .assignment-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #008c5a;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#assignments">Assignments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Praise Sunday</h1>
+                <p>Web Developer | Creative Thinker | Problem Solver</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://otiktpyazqotihijbwhm.supabase.co/storage/v1/object/public/images/e5d70be7-7239-46aa-8f6e-43d8bfd4189e-WhatsApp%20Image%202025-02-06%20at%2020.53.29_5cd4fd34.jpg" alt="Praise Sunday">
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <p>Hello! I'm Praise Sunday, a passionate web developer with a keen eye for design and a love for creating seamless user experiences. With expertise in HTML, CSS, JavaScript, and various modern frameworks, I bring ideas to life through clean, efficient code.</p>
+        </section>
+
+        <section id="assignments" class="assignments">
+            <h2><i class="fas fa-code"></i> My Assignments</h2>
+            <div class="assignments-grid">
+                <div class="assignment-card">
+                    <h3>Otter-Essay</h3>
+                    <p>AltSchool HTML and CSS Assignment 1</p>
+                    <a href="https://altschool-assignments-lime.vercel.app/assignment1.html" class="btn">View Project</a>
+                </div>
+                <div class="assignment-card">
+                    <h3>Huckle-Berry</h3>
+                    <p>AltSchool HTML and CSS Assignment 2</p>
+                    <a href="https://altschool-assignments-lime.vercel.app/assignment2.html" class="btn">View Project</a>
+                </div>
+                <div class="assignment-card">
+                    <h3>Novus</h3>
+                    <p>AltSchool HTML and CSS Assignment 3</p>
+                    <a href="https://altschool-assignments-lime.vercel.app/assignment3.html" class="btn">View Project</a>
+                </div>
+                <div class="assignment-card">
+                    <h3>Health Sign-Up Form</h3>
+                    <p>AltSchool HTML and CSS Assignment 4</p>
+                    <a href="https://altschool-assignments-lime.vercel.app/assignment4.html" class="btn">View Project</a>
+                </div>
+                <div class="assignment-card">
+                    <h3>WP Pusher and Kit</h3>
+                    <p>AltSchool HTML and CSS Assignment 5</p>
+                    <a href="https://altschool-assignments-lime.vercel.app/assignment5.html" class="btn">View Project</a>
+                </div>
+                <div class="assignment-card">
+                    <h3>Scissor</h3>
+                    <p>AltSchool HTML and CSS Assignment 6</p>
+                    <a href="https://altschool-assignments-lime.vercel.app/assignment6.html" class="btn">View Project</a>
+                </div>
+                <div class="assignment-card">
+                    <h3>HTML Table</h3>
+                    <p>AltSchool HTML Assignment 1</p>
+                    <a href="https://alt-school-html-assignment-delta.vercel.app/assignment1.html" class="btn">View Project</a>
+                </div>
+                <div class="assignment-card">
+                    <h3>HTML Media</h3>
+                    <p>AltSchool HTML Assignment 2</p>
+                    <a href="https://alt-school-html-assignment-delta.vercel.app/assignment2.html" class="btn">View Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Praise Sunday. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
